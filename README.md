@@ -1,12 +1,10 @@
 # AudioVisualizer
 
-![AudioVisualizer Screenshot](https://github.com/DCchoudhury15/audiovisualizer/blob/main/ss%26vid/Screenshot%20from%202025-08-16%2016-26-36.png)![AudioVisualizer Screenshot](https://github.com/DCchoudhury15/audiovisualizer/blob/main/ss%26vid/Screenshot%20from%202025-08-16%2016-26-31.png)()
+![AudioVisualizer Screenshot](https://github.com/DCchoudhury15/audiovisualizer/blob/main/ss%26vid/Screenshot%20from%202025-08-16%2016-26-36.png)![AudioVisualizer Screenshot](https://github.com/DCchoudhury15/audiovisualizer/blob/main/ss%26vid/Screenshot%20from%202025-08-16%2016-26-31.png)
 
-*Screenshot placeholder: Replace `screenshot.png` with actual screenshot image showing the app UI or visualization output.*
 
-![AudioVisualizer Demo](https://youtu.be/your-video-link)
+[Demo link](https://github.com/DCchoudhury15/audiovisualizer/blob/main/ss%26vid/Screencast%20from%202025-08-16%2016-02-08.webm)
 
-*Video demo placeholder: Replace the URL with the actual YouTube or video demo link demonstrating the AudioVisualizer in action.*
 
 AudioVisualizer is a Python-based tool designed to transform audio files into captivating visual representations. It analyzes audio data, extracts features like waveforms, spectrograms, and frequency spectra, and renders them in real-time or as static images/videos. This project is ideal for music enthusiasts, developers building multimedia apps, or anyone interested in audio processing and visualization.
 
