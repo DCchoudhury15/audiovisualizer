@@ -1,6 +1,6 @@
 # AudioVisualizer
 
-![AudioVisualizer Screenshot](screenshot.png)
+![AudioVisualizer Screenshot](https://github.com/DCchoudhury15/audiovisualizer/blob/main/ss%26vid/Screenshot%20from%202025-08-16%2016-26-26.png)()()
 
 *Screenshot placeholder: Replace `screenshot.png` with actual screenshot image showing the app UI or visualization output.*
 
