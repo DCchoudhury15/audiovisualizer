@@ -19,7 +19,7 @@ const Waveform = ({ data, title }: { data: number[]; title: string }) => {
       let y = centerY;
 
       if (range > 0) {
-        const normalizedSample = (sample - min) / range; // 0 - 1, -0.5 - 0.5
+        const normalizedSample = (sample - min) / range; // 0 - 1
         y = centerY - (normalizedSample - 0.5) * 2 * scaleY;
       }
 
@@ -27,30 +27,40 @@ const Waveform = ({ data, title }: { data: number[]; title: string }) => {
     })
     .join(" ");
 
+  // Close the path back to the baseline so we can fill the area underneath.
+  const areaData = `${pathData} L ${width} ${centerY} L 0 ${centerY} Z`;
+
   return (
     <div className="flex h-full w-full flex-col">
       <div className="flex flex-1 items-center justify-center">
         <svg
           viewBox={`0 0 ${width} ${height}`}
           preserveAspectRatio="xMidYMid meet"
-          className="block max-h-[300px] max-w-full rounded border border-stone-200"
+          className="block max-h-[300px] max-w-full rounded-lg border border-slate-700/60 bg-slate-950"
         >
+          <defs>
+            <linearGradient id="waveform-fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.35" />
+              <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+            </linearGradient>
+          </defs>
           <path
             d={`M 0 ${centerY} H ${width}`}
-            stroke="#e7e5e4"
+            stroke="#1e293b"
             strokeWidth="1"
           />
+          {range > 0 && <path d={areaData} fill="url(#waveform-fill)" />}
           <path
             d={pathData}
             fill="none"
-            stroke="#44403c"
+            stroke="#22d3ee"
             strokeWidth="1.5"
             strokeLinejoin="round"
             strokeLinecap="round"
           />
         </svg>
       </div>
-      <p className="mt-2 text-center text-xs text-stone-500">{title}</p>
+      <p className="mt-2 text-center text-xs text-slate-500">{title}</p>
     </div>
   );
 };

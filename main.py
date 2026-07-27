@@ -156,10 +156,10 @@ def main():
 
     waveform_info = result.get("waveform", {})
     if waveform_info:
-        values = waveform_info.get("values", {})
+        values = waveform_info.get("values", [])
         print(f"First 10 values: {[round(v, 4) for v in values[:10]]}...")
-        print(f"Duration: {waveform_info.get("duration", 0)}")
+        print(f"Duration: {waveform_info.get('duration', 0)}")
 
     print("Top predictions:")
     for pred in result.get("predictions", []):
-        print(f"  -{pred["class"]} {pred["confidence"]:0.2%}")
+        print(f"  -{pred['class']} {pred['confidence']:0.2%}")
